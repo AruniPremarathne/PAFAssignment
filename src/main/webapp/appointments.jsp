@@ -12,11 +12,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+    h1{
+        display: block;
+        font-weight: bold;
+        text-align: center;
+    }
+</style>
     <meta charset="ISO-8859-1">
-    <title>Appointment</title>
-    <link rel="stylesheet" href="Views/bootstrap.min.css">
-    <script src="Components/jquery-3.4.0.min.js"></script>
+    <title>Appointments Management</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="Components/jquery-3.5.0.min.js"></script>
     <script src="Components/appointments.js"></script>
+
 </head>
 <body>
 <div class="container">
@@ -24,6 +32,8 @@
         <div class="col-6">
             <h1>Appointment Management </h1>
             <form id="formAppointment" name="formAppointment">
+                <br>
+
                 User ID:
                 <input id="userID" name="userID" type="text"
                        class="form-control form-control-sm">
@@ -53,13 +63,16 @@
                 <input type="hidden" id="hidAppointmentIDSave"
                        name="hidAppointmentIDSave" value="">
             </form>
+
+            <br>
+
             <div id="alertSuccess" class="alert alert-success"></div>
             <div id="alertError" class="alert alert-danger"></div>
             <br>
             <div id="divAppointmentsGrid">
                 <%
                     Appointment appObj = new Appointment();
-                    System.out.print(appObj.readAppointments());
+                    out.print(appObj.readAppointments());
                 %>
             </div>
 

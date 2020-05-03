@@ -1,9 +1,7 @@
 $(document).ready(function()
 {
-    if ($("#alertSuccess").text().trim() == "")
-    {
-        $("#alertSuccess").hide();
-    }
+
+    $("#alertSuccess").hide();
     $("#alertError").hide();
 });
 
@@ -26,9 +24,6 @@ $(document).on("click", "#btnSave", function(event)
     }
 
 // If valid------------------------
-    $("#formAppointment").submit();
-});
-
 
 var type = ($("#hidAppointmentIDSave").val() == "") ? "POST" : "PUT";
 
@@ -43,7 +38,7 @@ $.ajax(
             onAppointmentSaveComplete(response.responseText, status);
         }
     });
-
+});
 
 
 function onAppointmentSaveComplete(response, status) {
