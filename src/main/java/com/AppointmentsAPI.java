@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import com.Appointment;
 
+
 @WebServlet("/AppointmentsAPI")
 public class AppointmentsAPI extends HttpServlet {
     private static final long serialVersionUID = 1L;
