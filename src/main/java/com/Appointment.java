@@ -137,7 +137,7 @@ public class Appointment {
             }
 
             // create a prepared statement
-            String query = "UPDATE appointment SET userID=?,doctorID=?,appointmetDate=?,appointmentTime=? WHERE appointmentID=?";
+            String query = "UPDATE appointment SET userID=?,doctorID=?,appointmentDate=?,appointmentTime=? WHERE appointmentID=?";
 
             PreparedStatement preparedStmt = con.prepareStatement(query);
 
