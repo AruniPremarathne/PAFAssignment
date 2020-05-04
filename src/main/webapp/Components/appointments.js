@@ -24,6 +24,7 @@ $(document).on("click", "#btnSave", function(event)
     }
 
 // If valid------------------------
+    $("#formAppointment").submit();
 
 var type = ($("#hidAppointmentIDSave").val() == "") ? "POST" : "PUT";
 

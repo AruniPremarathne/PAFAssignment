@@ -29,8 +29,8 @@ public class Appointment {
             }
 
             // Prepare the html table to be displayed
-            output = "<table border=1 padding=10><tr style=\"text-align:center;\">"
-                    + "<th>Appointment ID</th> <th>User ID</th >"
+            output = "<table border='1'> "
+                    + " <tr><th>User ID</th >"
                     + "<th >Doctor ID</th > " + "<th>Appointment Date</th>"
                     + "<th>Appointment Time</th>"
                     + "<th>Update</th ><th>Remove</th></tr> ";
@@ -49,11 +49,10 @@ public class Appointment {
                 String appointmentTime = rs.getString("appointmentTime");
 
                 // Add into the html table
-                output += "<tr><td><input id='hidAppointmentIDSave'"
-                        + "name='hidAppointmentIDSave'"
+                output += "<tr><td><input id='hidAppointmentIDUpdate'"
+                        + "name='hidAppointmentIDUpdate'"
                         + "type='hidden' value='"
-                        + appointmentID+ "'>" + appointmentID + "</td>";
-                output += "<td>" + userID + "</td>";
+                        + appointmentID + "'>" + userID + "</td>";
                 output += "<td>" + doctorID + "</td>";
                 output += "<td>" + appointmentDate + "</td>";
                 output += "<td>" + appointmentTime + "</td>";
