@@ -21,7 +21,7 @@
 </style>
     <meta charset="ISO-8859-1">
     <title>Appointments Management</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Views/css/bootstrap.min.css">
     <script src="Components/jquery-3.5.0.min.js"></script>
     <script src="Components/appointments.js"></script>
 
@@ -66,7 +66,10 @@
 
             <br>
 
-            <div id="alertSuccess" class="alert alert-success"></div>
+            <div id="alertSuccess" class="alert alert-success">
+                <% out.print(session.getAttribute("statusMsg"));%>
+            </div>
+
             <div id="alertError" class="alert alert-danger"></div>
             <br>
             <div id="divAppointmentsGrid">

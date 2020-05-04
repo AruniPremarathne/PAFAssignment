@@ -6,7 +6,7 @@ public class Appointment {
     private Connection connect() {
         Connection con = null;
         try {
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3308/apphealthcare", "root", "");
 
         } catch (Exception e) {
